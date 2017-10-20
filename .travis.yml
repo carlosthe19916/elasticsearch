@@ -1,0 +1,28 @@
+language: java
+
+jdk:
+  - oraclejdk8
+
+script: mvn --settings .travis/settings.xml clean verify
+
+deploy:
+  -
+    provider: script
+    script: .travis/deploy.sh
+    skip_cleanup: true
+    on:
+      repo: openfact/elasticsearch
+      branch: master
+      jdk: oraclejdk8
+  -
+    provider: script
+    script: .travis/deploy.sh
+    skip_cleanup: true
+    on:
+      repo: openfact/elasticsearch
+      tags: true
+      jdk: oraclejdk8
+
+notifications:
+  email:
+    - carlosthe19916@gmail.com
