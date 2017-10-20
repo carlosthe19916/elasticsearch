@@ -215,7 +215,7 @@
                             <!-- Include only Elasticsearch and relocated dependencies. Promote everything else as transitive dependencies -->
                             <artifactSet>
                                 <includes>
-                                    <include>org.icgc.dcc:*</include>
+                                    <include>org.sistcoop:*</include>
                                     <include>org.elasticsearch:*</include>
                                     <include>org.elasticsearch.client:*</include>
                                     <include>org.elasticsearch.plugin:*</include>
@@ -227,6 +227,7 @@
                                     <include>org.apache.httpcomponents:*</include>
                                     <include>commons-codec:*</include>
                                     <include>org.jboss.netty:*</include>
+                                    <include>org.apache.lucene:*</include>
                                 </includes>
                             </artifactSet>
                             <filters>
