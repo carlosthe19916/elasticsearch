@@ -14,9 +14,10 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Versions -->
-        <elasticsearch.version>5.6.3</elasticsearch.version>
+        <elasticsearch.version>5.6.4</elasticsearch.version>
         <shade-plugin.version>3.1.0</shade-plugin.version>
 
         <!-- Configuration -->
@@ -167,6 +168,9 @@
                                         <Build-Date>${maven.build.timestamp}</Build-Date>
                                     </manifestEntries>
                                 </transformer>
+                                <transformers>
+                                    <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                                </transformers>
                             </transformers>
                             <relocations>
                                 <!-- elasticsearch-shade relocations -->
