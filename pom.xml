@@ -168,9 +168,7 @@
                                         <Build-Date>${maven.build.timestamp}</Build-Date>
                                     </manifestEntries>
                                 </transformer>
-                                <transformers>
-                                    <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
-                                </transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                             </transformers>
                             <relocations>
                                 <!-- elasticsearch-shade relocations -->
